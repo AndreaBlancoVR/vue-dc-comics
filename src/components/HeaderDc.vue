@@ -152,6 +152,7 @@ export default {
       width: 80px;
       height: 80px;
       margin: 0;
+      cursor: pointer;
     }
 
     .main-nav {
