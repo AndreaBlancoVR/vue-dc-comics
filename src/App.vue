@@ -22,6 +22,13 @@ export default {
 </script>
 
 <style lang="scss">
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 #app {
   font-family: "Greta Sans Condensed Bold","Greta Sans Bold",Arial,sans-serif;
   // font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -29,7 +36,7 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   // text-align: center;
   color: #2c3e50;
-  margin: 0 auto;
+  
   // max-width: 1280px;
   ul {
     list-style: none;

@@ -8,7 +8,10 @@
       <div class="jumbo-container">
         <div class="jumbo">
           <div class="row">
-            <ComicsDc v-for="(el, i) in cardsData" :key="i" :src="el.thumb" :series="el.series" />
+            <ul>
+              <ComicsDc v-for="(el, i) in CardsData" :key="i" :thumb="el.thumb" :series="el.series" />
+            </ul>
+            
             <!-- <ul>
               <li class="card-wrapper">
                 <figure class="card-header">
@@ -165,7 +168,7 @@
 </template>
 
 <script>
-import ComicsDc from '.ComicsDc.vue'
+// import ComicsDc from '.ComicsDc.vue'
 import ComicsDc from './ComicsDc.vue'
 
 
@@ -249,7 +252,7 @@ export default {
           "type": "graphic novel"
         }
       ],
-      
+
       MainMenu: [
         {
           text: 'Digital Comics',
@@ -330,35 +333,35 @@ export default {
         }
       }
 
-      .card-wrapper {
-        display: flex;
-        flex-direction: column;
-        width: calc(95% / 6);
-        height: 240px;
+      // .card-wrapper {
+      //   display: flex;
+      //   flex-direction: column;
+      //   width: calc(95% / 6);
+      //   height: 240px;
 
-      }
+      // }
 
-      .card-header {
-        display: flex;
-        position: relative;
-        width: 185px;
-        height: 185px;
+      // .card-header {
+      //   display: flex;
+      //   position: relative;
+      //   width: 185px;
+      //   height: 185px;
 
-        img {
-              display: flex;
-              width: 100%;
-              object-fit: cover;
-              object-position: top;
-        }
-      }
+      //   img {
+      //         display: flex;
+      //         width: 100%;
+      //         object-fit: cover;
+      //         object-position: top;
+      //   }
+      // }
 
-      .card-footer {
-        width: 100%;
-        height: 55px;
-        line-height: 55px;
-        text-transform: uppercase;
-        font-size: 14px;
-      }
+      // .card-footer {
+      //   width: 100%;
+      //   height: 55px;
+      //   line-height: 55px;
+      //   text-transform: uppercase;
+      //   font-size: 14px;
+      // }
 
       .row_2 {
         display: flex;
