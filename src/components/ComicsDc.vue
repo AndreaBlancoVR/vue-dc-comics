@@ -21,15 +21,19 @@
         display: flex;
         flex-direction: column;
         width: calc(95% / 6);
-        height: 240px;
+        min-width: 150px;
+        // height: 240px;
+        padding: 8px;
 
       }
 
       .card-header {
         display: flex;
         position: relative;
-        width: 185px;
-        height: 185px;
+        // width: 185px;
+        // height: 185px;
+        width: 100%;
+        aspect-ratio: 1;
 
         img {
               display: flex;

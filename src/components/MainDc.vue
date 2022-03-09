@@ -3,6 +3,9 @@
     <div class="container">
       <div class="jumbo-up-container">
         <div class="jumbo-up">
+          <a href="">
+            Current series
+          </a>
         </div>
       </div>
       <div class="jumbo-container">
@@ -304,15 +307,38 @@ export default {
         display: flex;
         justify-content: center;
         background-color: #1C1C1C;
-        min-height: 668px;
+        // min-height: 668px;
       }
 
       .jumbo-up-container {
         width: 100%;
         height: 400px;
         background-image: url("../assets/img/jumbotron.jpg");
-        background-size: 100%;
-        background-repeat: no-repeat
+        // background-size: 100%;
+        background-repeat: no-repeat;
+        display: flex;
+        justify-content: center;
+
+        .jumbo-up {
+          position: relative;
+          width: 100%;
+          max-width: 1280px;
+          
+
+          a {
+            text-decoration: none;
+            color: white;
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            background-color: #0282F9;
+            padding: 10px 55px;
+            position: absolute;
+            white-space: nowrap;
+            bottom: -16px;
+            left: 0px;
+          }
+        }
       }
 
       .jumbo {
@@ -325,8 +351,9 @@ export default {
         display: flex;
         flex-basis: 100%;
         gap: 1%;
+        justify-content: space-between;
         flex-wrap: wrap;
-        padding: 52px 0;
+        padding: 52px 14px;
 
         ul {
           display: contents;
@@ -366,6 +393,7 @@ export default {
       .row_2 {
         display: flex;
         justify-content: center;
+        margin-bottom: 20px;
         a {
           text-decoration: none;
           color: white;
