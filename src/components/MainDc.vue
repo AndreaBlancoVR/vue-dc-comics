@@ -12,7 +12,7 @@
         <div class="jumbo">
           <div class="row">
             <ul>
-              <ComicsDc v-for="(el, i) in CardsData" :key="i" :thumb="el.thumb" :series="el.series" />
+              <ComicsDc v-for="(el, i) in CardsData" :key="i" :thumb="el.thumb" :series="el.series" :price="el.price" />
             </ul>
             
             <!-- <ul>
