@@ -1,47 +1,52 @@
 <template>
   <div class="main">
     <div class="container">
-      <div class="jumbo">
+      <div class="jumbo-container">
+        <div class="jumbo">
         --> Content Goes here --
+        </div>
       </div>
-      <div class="menu-wrapper">
-        <ul class="menu">
-          <li v-for="(el, i) in MainMenu"  
-            class="menu__item"
-            :key="i">   
-          <figure>
-            <img :src="require('../assets/img/' + el.image)">
-          </figure>
-          <a href="el.href">
-            {{ el.text }}
-          </a>
-          </li>
-          <!-- <li class="menu__item">
+      <div class="menu-container">
+        <div class="menu-wrapper">
+          <ul class="menu">
+            <li v-for="(el, i) in MainMenu"  
+              class="menu__item"
+              :key="i">   
             <figure>
-              <img src="../assets/img/buy-comics-merchandise.png" alt="">
+              <img :src="require('../assets/img/' + el.image)">
             </figure>
-            <a href="" class="">DC Merchandise</a>
-          </li>
-          <li class="menu__item">
-            <figure>
-              <img src="../assets/img/buy-comics-subscriptions.png" alt="">
-            </figure>
-            <a href="" class="">Subscription</a>
-          </li>
-          <li class="menu__item">
-            <figure>
-              <img src="../assets/img/buy-comics-shop-locator.png" alt="">
-            </figure>
-            <a href="" class="">Comic Shop Locator</a>
-          </li>
-          <li class="menu__item">
-            <figure>
-              <img src="../assets/img/buy-dc-power-visa.svg" alt="">
-            </figure>
-            <a href="" class="">DC Power VISA</a>
-          </li> -->
-        </ul>
+            <a href="el.href">
+              {{ el.text }}
+            </a>
+            </li>
+            <!-- <li class="menu__item">
+              <figure>
+                <img src="../assets/img/buy-comics-merchandise.png" alt="">
+              </figure>
+              <a href="" class="">DC Merchandise</a>
+            </li>
+            <li class="menu__item">
+              <figure>
+                <img src="../assets/img/buy-comics-subscriptions.png" alt="">
+              </figure>
+              <a href="" class="">Subscription</a>
+            </li>
+            <li class="menu__item">
+              <figure>
+                <img src="../assets/img/buy-comics-shop-locator.png" alt="">
+              </figure>
+              <a href="" class="">Comic Shop Locator</a>
+            </li>
+            <li class="menu__item">
+              <figure>
+                <img src="../assets/img/buy-dc-power-visa.svg" alt="">
+              </figure>
+              <a href="" class="">DC Power VISA</a>
+            </li> -->
+          </ul>
+        </div>
       </div>
+      
 
   
   
@@ -96,24 +101,37 @@ export default {
     display: flex;
 
     .container {
-      width: 1280px;
+      width: 100%;
       display: flex;
       flex-direction: column;
-      // align-items: center;
-      border: 1px solid red;
+      align-items: center;
+
+      .jumbo-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        background-color: #1C1C1C;
+      }
 
       .jumbo {
         min-height: 132px;
-        width: 100%;
-        background-color: #1C1C1C;
+        width: 1280px;
+        
         color: white;
+      }
+
+      .menu-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        background-color: #0282F9;
       }
       .menu-wrapper{
         display: flex;
         justify-content: center;
-        width: 100%;
+        width: 1280px;
         height: 155px;
-        background-color: #0282F9;
+
       }
       .menu {
           display: flex;
@@ -142,7 +160,7 @@ export default {
             font-size: 12px;
             font-weight: 700;
             text-transform: uppercase;
-        }
+            }
           }
       }
     }

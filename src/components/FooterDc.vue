@@ -7,10 +7,12 @@
             <h2 class="map-title">DC Comics</h2>
             <div class="">
               <ul class="menu">
-                <li class="menu__item">
-                  <a href="">Characters</a>
+                <li v-for="(el, i) in UlOne" 
+                class="menu__item" 
+                :key="i">
+                  <a href="el.href">{{ el.text }}</a>
                 </li>
-                <li class="menu__item">
+                <!-- <li class="menu__item">
                   <a href="">Comics</a
                 ></li>
                 <li class="menu__item">
@@ -30,29 +32,33 @@
                 </li>
                 <li class="menu__item">
                   <a href="">DC Shop</a>
-                </li>
+                </li> -->
               </ul>    
             </div>
             <h2 class="">Shop</h2>
             <div class="">
               <ul class="menu">
-                    <li class="menu__item">
-                      <a href="">Shop DC</a>
-                    </li>
-                    <li class="menu__item">
-                      <a href="">Shop DC Collectibles</a>
-                    </li>
-                </ul>
+                <li v-for="(el, i) in UlTwo"
+                class="menu__item"
+                :key="i">
+                  <a href="el.href">{{ el.text }}</a>
+                </li>
+                <!-- <li class="menu__item">
+                  <a href="">Shop DC Collectibles</a>
+                </li> -->
+              </ul>
             </div>
           </div>
           <div class="">
             <h2 class="">DC</h2>
             <div class="">
               <ul class="menu">
-                <li class="menu__item">
-                  <a href="">Terms of Use</a>
+                <li v-for="(el, i) in UlThree" 
+                class="menu__item"
+                :key="i">
+                  <a href="el.href">{{ el.text}}</a>
                 </li>
-                <li class="menu__item">
+                <!-- <li class="menu__item">
                   <a href="">Privacy Policy (New)</a>
                 </li>
                 <li class="menu__item">
@@ -78,7 +84,7 @@
                 </li>
                 <li class="menu__item">
                   <a href="">Contact Us</a>
-                </li>
+                </li> -->
               </ul>    
             </div>
           </div>
@@ -86,21 +92,23 @@
             <h2 class="">Sites</h2>
             <div class="">
               <ul class="menu">
-                <li class="menu__item">
-                  <a href="">DC</a>
+                <li v-for="(el, i) in UlFour"
+                class="menu__item"
+                :key="i">
+                  <a href="el.href">{{ el.text }}</a>
                 </li>
-                <li class="menu__item">
-                  <a href="">DC UNIVERSE INFINITE</a>
+                <!-- <li class="menu__item">
+                  <a href="">DC Power Visa</a>
                 </li>
                 <li class="menu__item">
                   <a href="">DC Kids</a>
                 </li>
                 <li class="menu__item">
-                  <a href="">DC Shop</a>
+                  <a href="">DC Universe</a>
                 </li>
                 <li class="menu__item">
                   <a href="">MAD Magazine</a>
-                </li>
+                </li> -->
               </ul>    
             </div>
           </div>
@@ -121,11 +129,18 @@
               <h2 class="">Follow us</h2>
               <div class="social-items">
                 <ul class="menu">
-                  <li class=""><img src="../assets/img/footer-facebook.png" alt=""></li>
-                  <li class=""><img src="../assets/img/footer-twitter.png" alt=""></li>
+                  <li v-for="(el, i) in UlIcons" 
+                  class=""
+                  :key="i">
+                    <a href="">
+                      <img :src="require('../assets/img/' + el.icon)">
+                    </a>
+                    
+                  </li>
+                  <!-- <li class=""><img src="../assets/img/footer-twitter.png" alt=""></li>
                   <li class=""><img src="../assets/img/footer-youtube.png" alt=""></li>
                   <li class=""><img src="../assets/img/footer-pinterest.png" alt=""></li>
-                  <li class=""><img src="../assets/img/footer-periscope.png" alt=""></li>
+                  <li class=""><img src="../assets/img/footer-periscope.png" alt=""></li> -->
                 </ul>    
               </div>
             </div>
@@ -140,7 +155,6 @@ export default {
   name: 'FooterDc',
   data() {
     return {
-      NavIndex: null,
       UlOne: [
         {
           text: 'Characters',
@@ -173,9 +187,102 @@ export default {
         {
           text: 'DC Shop',
           href: '#',
+        },        
+      ],
+
+      UlTwo: [
+        {
+          text: 'Shop DC',
+          href: '#',
         },
-        
-      ]
+        {
+          text: 'Shop DC Collectibles',
+          href: '#',
+        },
+      ],
+      UlThree: [
+        {
+          text: 'Terms of Use',
+          href: '#',
+        },
+        {
+          text: 'Privacy Policy (New)',
+          href: '#',
+        },
+        {
+          text: 'Ad Choices',
+          href: '#',
+        },
+        {
+          text: 'Advertising',
+          href: '#',
+        },
+        {
+          text: 'Jobs',
+          href: '#',
+        },
+        {
+          text: 'Subscriptions',
+          href: '#',
+        },
+        {
+          text: 'CPSC Certificates',
+          href: '#',
+        },
+        {
+          text: 'Ratings',
+          href: '#',
+        },
+        {
+          text: 'Shop Help',
+          href: '#',
+        },  
+        {
+          text: 'Contact Us',
+          href: '#',
+        },          
+      ],
+
+      UlFour: [
+        {
+          text: 'DC',
+          href: '#',
+        },
+        {
+          text: 'MAD Magazine',
+          href: '#',
+        },
+        {
+          text: 'DC Kids',
+          href: '#',
+        },
+        {
+          text: 'DC Universe',
+          href: '#',
+        },
+        {
+          text: 'DC Power Visa',
+          href: '#',
+        },
+      ],
+
+      UlIcons: [
+        {
+          icon: 'footer-facebook.png',
+        },
+        {
+          icon: 'footer-twitter.png',
+        },
+        {
+          icon: 'footer-youtube.png',
+        },
+        {
+          icon: 'footer-pinterest.png',
+        },
+        {
+          icon: 'footer-periscope.png',
+        },
+      ],
     }
   }
 }
@@ -276,6 +383,10 @@ export default {
 
           ul {
             display: contents;
+
+            a {
+              display: contents;
+            }
           }
         }
 

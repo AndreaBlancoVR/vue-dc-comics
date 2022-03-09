@@ -1,73 +1,76 @@
 <template>
   <div class="header">
-    <div class="container">
-      <figure class="logo">
+    <div class="container-fluid">
+      <div class="container">
+        <figure class="logo">
           <img src="../assets/img/dc-logo.png" alt="">
-    </figure>
-    <nav class="main-nav nav">
-      <ul>
-        <li v-for="(el, i) in HeaderMenu" 
+      </figure>
+      <nav class="main-nav nav">
+        <ul>
+          <li v-for="(el, i) in HeaderMenu" 
             :class=" NavIndex == i ? 'active' : '' " 
             class="nav__item"
             @mouseenter="NavIndex = i"
             @mouseleave="NavIndex = null" 
             :key="i">   
-          <a :href="el.href">
-            {{ el.text }}
-          </a>
-        </li> 
-        <!-- <li class="nav__item">
-          <a href="">
-            Character
-          </a>
-        </li>
-        <li class="nav__item active">
-          <a href="">
-            Comics
-          </a>
-        </li>
-        <li class="nav__item">
-          <a href="">
-            Movies
-          </a>
-        </li>
-        <li class="nav__item">
-          <a href="">
-            TV
-          </a>
-        </li>
-        <li class="nav__item">
-          <a href="">
-            Games
-          </a>
-        </li>
-        <li class="nav__item">
-          <a href="">
-            Collectibles
-          </a>
-        </li>
-        <li class="nav__item">
-          <a href="">
-            Videos
-          </a>
-        </li>
-        <li class="nav__item">
-          <a href="">
-            Fans
-          </a>
-        </li>
-        <li class="nav__item">
-          <a href="">
-            News
-          </a>
-        </li>
-        <li class="nav__item">
-          <a href="">
-            Shop
-          </a>
-        </li> -->
-      </ul>
+            <a :href="el.href">
+              {{ el.text }}
+            </a>
+          </li> 
+          <!-- <li class="nav__item">
+            <a href="">
+              Character
+            </a>
+          </li>
+          <li class="nav__item active">
+            <a href="">
+              Comics
+            </a>
+          </li>
+          <li class="nav__item">
+            <a href="">
+              Movies
+            </a>
+          </li>
+          <li class="nav__item">
+            <a href="">
+              TV
+            </a>
+          </li>
+          <li class="nav__item">
+            <a href="">
+              Games
+            </a>
+          </li>
+          <li class="nav__item">
+            <a href="">
+              Collectibles
+            </a>
+          </li>
+          <li class="nav__item">
+            <a href="">
+              Videos
+            </a>
+          </li>
+          <li class="nav__item">
+            <a href="">
+              Fans
+            </a>
+          </li>
+          <li class="nav__item">
+            <a href="">
+              News
+            </a>
+          </li>
+          <li class="nav__item">
+            <a href="">
+              Shop
+            </a>
+          </li> -->
+        </ul>
       </nav>
+      </div>
+      
     </div>
   </div>
 </template>
@@ -139,12 +142,17 @@ export default {
     justify-content: center;
     display: flex;
 
-    .container {
-    width: 1280px;
+    .container-fluid {
+    width: 100%;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border: 1px solid red;
+    justify-content: center;
+    }
+
+    .container {
+      width: 1280px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
 
     .logo {
